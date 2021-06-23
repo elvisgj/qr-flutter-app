@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:qr_scanner/generate_bloc.dart';
-import 'package:qr_scanner/generate_qr.dart';
-import 'package:qr_scanner/scan_qr.dart';
-import 'package:qr_scanner/FloatingShare.dart';
+import 'package:qr_scanner/generate_qr/generate_qr.dart';
+import 'package:qr_scanner/scan_qr/scan_qr.dart';
+import 'package:qr_scanner/generate_qr/FloatingShare.dart';
+import 'generate_qr/generate_bloc.dart';
 
 void main() {
-  runApp(BlocProvider(create: (_) => GenerateBloc(), child: MyApp()));
+  runApp(
+    BlocProvider(create: (_) => GenerateBloc(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         title: 'QR scanner',
         theme: ThemeData(
           primaryColor: Colors.grey[900],
-          accentColor: Colors.yellow[400],
+          accentColor: Colors.amber[700],
         ),
         home: MyHomePage(),
       );
@@ -48,13 +49,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(
-          Icons.qr_code,
-          color: Theme.of(context).accentColor,
+          Icons.qr_code_outlined,
+          color: Colors.white70,
         ),
         shadowColor: Colors.white,
         title: Text(
           "Qr Scaner & Generator",
-          style: TextStyle(color: Theme.of(context).accentColor),
+          style: TextStyle(color: Colors.white70),
         ),
       ),
       backgroundColor: Colors.black,
@@ -63,12 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _screens.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 1,
         backgroundColor: Theme.of(context).primaryColor,
+        elevation: 4,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.autorenew,
+              Icons.qr_code_2_outlined,
             ),
             label: "Generate",
           ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
-import 'package:qr_scanner/color_picker.dart';
-import 'package:qr_scanner/generate_bloc.dart';
-import 'package:qr_scanner/generate_textfield.dart';
-import 'package:qr_scanner/qr_image.dart';
+import 'package:qr_scanner/generate_qr/color_picker.dart';
+import 'package:qr_scanner/generate_qr/qr_image.dart';
+import 'generate_bloc.dart';
+import 'generate_textfield.dart';
 
 class Generate extends StatefulWidget {
   const Generate({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class Generate extends StatefulWidget {
   @override
   _GenerateState createState() => _GenerateState();
 }
+
 
 class _GenerateState extends State<Generate> with TickerProviderStateMixin {
   @override

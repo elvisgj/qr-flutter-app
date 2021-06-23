@@ -14,7 +14,6 @@ class GenerateInput extends StatelessWidget {
           decoration: InputDecoration(
             fillColor: Colors.white,
             hintText: "Type here",
-            border: InputBorder.none,
             filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(25.0),

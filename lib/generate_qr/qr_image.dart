@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:screenshot/screenshot.dart';
-
 import 'generate_bloc.dart';
 
 class QrProduct extends StatelessWidget {
@@ -25,7 +24,7 @@ class QrProduct extends StatelessWidget {
               width: 250,
               height: 250,
               decoration: BoxDecoration(
-                border: Border.all(width: 1, color: Colors.white70),
+                border: Border.all(width: 1, color: Colors.grey),
               ),
               child: Center(
                 child: Padding(
@@ -33,7 +32,7 @@ class QrProduct extends StatelessWidget {
                   child: Text(
                     "Write something",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.grey,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
