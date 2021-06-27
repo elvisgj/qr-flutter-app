@@ -3,17 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'generate_bloc.dart';
 
 class FloatingShare extends StatelessWidget {
-  const FloatingShare({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<GenerateBloc, GenerateState>(builder: (context, state) {
       return FloatingActionButton(
+        backgroundColor: Theme.of(context).accentColor,
         elevation: 5,
         child: Icon(
           Icons.share,
         ),
         onPressed: () {
+            ScaffoldMessenger.of(context).removeCurrentSnackBar();
           state.input == ""
               ? ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
