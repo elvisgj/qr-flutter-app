@@ -48,7 +48,7 @@ class ColorPickerQR extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(
         side: BorderSide(
-          color: Colors.white70,
+          color: Theme.of(context).primaryColor,
           width: 0.5,
         ),
         padding: EdgeInsets.symmetric(
@@ -65,13 +65,13 @@ class ColorPickerQR extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: Colors.white70,
+                  color: Theme.of(context).primaryColor,
                   fontSize: 16,
                 ),
               ),
               Icon(
                 Icons.colorize,
-                color: Colors.white70,
+                color: Theme.of(context).primaryColor,
                 size: 20,
               )
             ],
@@ -84,7 +84,7 @@ class ColorPickerQR extends StatelessWidget {
             width: 20,
             decoration: BoxDecoration(
               border: Border.all(
-                color: Colors.white70,
+                color: Theme.of(context).primaryColor,
               ),
               color: color,
               borderRadius: BorderRadius.all(

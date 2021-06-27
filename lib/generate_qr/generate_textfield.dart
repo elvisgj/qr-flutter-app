@@ -9,10 +9,12 @@ class GenerateInput extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: TextFormField(
+          style: TextStyle(color: Colors.black),
           onChanged: (val) => onChange(val),
           cursorColor: Theme.of(context).primaryColor,
           decoration: InputDecoration(
-            fillColor: Colors.white,
+            hintStyle: TextStyle(color: Theme.of(context).hintColor),
+            fillColor: Colors.grey[100],
             hintText: "Type here",
             filled: true,
             enabledBorder: OutlineInputBorder(
